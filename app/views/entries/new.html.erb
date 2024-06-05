@@ -1,7 +1,7 @@
 <div class="container">
   <h1>New Entry</h1>
   <%if @current_user != nil%>
-    <form action="/entries" method="post">
+    <form action="/entries" method="post" enctype="multipart/form-date">
       <input type="hidden" name="place_id" value="<%= params["place_id"] %>">
 
       <div class="mb-4">
@@ -21,7 +21,7 @@
 
       <div class ="mb-4">
         <label for="uploaded_image_input" class="form-label">Upload Image</label>
-        <input type="file" name="uploaded_image" id="uploaded_image_input">
+        <input type="file" name="uploaded_image" id="uploaded_image_input" class="form-control">
       </div>
       <button type="submit" class="btn btn-primary btn-lg active">Save</button>
     </form>
